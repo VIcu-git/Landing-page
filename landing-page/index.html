@@ -3,25 +3,153 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Landing Page</title>
+  <title>Sonrisa Imperial | Clínica Dental</title>
+  <meta name="description" content="Sonrisa Imperial, clínica dental. Agenda tu cita de evaluación en minutos.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <header class="hero">
-    <h1>Bienvenido</h1>
-    <p>Tu nueva landing page empieza aquí.</p>
-    <a href="#contacto" class="btn">Comenzar</a>
+  <header class="nav">
+    <div class="container nav__inner">
+      <a href="#" class="logo">Sonrisa <span>Imperial</span></a>
+      <nav class="nav__links">
+        <a href="#servicios">Servicios</a>
+        <a href="#nosotros">Nosotros</a>
+        <a href="#contacto">Contacto</a>
+      </nav>
+      <a href="#agendar" class="btn btn--small">Agendar cita</a>
+    </div>
   </header>
 
   <main>
-    <section id="contacto">
-      <h2>Contacto</h2>
-      <p>Escríbenos para más información.</p>
+    <section class="hero">
+      <div class="container hero__inner">
+        <p class="eyebrow">Clínica dental</p>
+        <h1>Tu mejor sonrisa, en manos expertas.</h1>
+        <p class="hero__text">Atención personalizada, tecnología moderna y un trato cercano. Agenda tu evaluación en menos de un minuto.</p>
+        <div class="hero__actions">
+          <a href="#agendar" class="btn">Agendar mi cita</a>
+          <a href="#servicios" class="link">Ver servicios &rarr;</a>
+        </div>
+      </div>
+    </section>
+
+    <section id="servicios" class="section">
+      <div class="container">
+        <p class="eyebrow">Servicios</p>
+        <h2>Lo que hacemos por ti</h2>
+        <div class="grid">
+          <article class="card">
+            <h3>Limpieza y prevención</h3>
+            <p>Profilaxis, revisión completa y consejos para mantener tu salud bucal.</p>
+          </article>
+          <article class="card">
+            <h3>Estética dental</h3>
+            <p>Blanqueamiento y carillas para una sonrisa natural y luminosa.</p>
+          </article>
+          <article class="card">
+            <h3>Ortodoncia</h3>
+            <p>Brackets y alineadores invisibles adaptados a tu estilo de vida.</p>
+          </article>
+          <article class="card">
+            <h3>Implantes</h3>
+            <p>Soluciones duraderas para recuperar piezas dentales con seguridad.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="nosotros" class="section section--alt">
+      <div class="container split">
+        <div>
+          <p class="eyebrow">Nosotros</p>
+          <h2>Cuidado con estándar imperial</h2>
+          <p>En Sonrisa Imperial combinamos experiencia clínica y atención humana. Te explicamos cada paso para que te sientas tranquilo desde la primera visita.</p>
+        </div>
+        <ul class="stats">
+          <li><strong>+10</strong><span>años de experiencia</span></li>
+          <li><strong>+3.000</strong><span>pacientes atendidos</span></li>
+          <li><strong>100%</strong><span>atención personalizada</span></li>
+        </ul>
+      </div>
+    </section>
+
+    <section id="agendar" class="section">
+      <div class="container booking">
+        <div class="booking__intro">
+          <p class="eyebrow">Agenda</p>
+          <h2>Reserva tu cita</h2>
+          <p>Completa el formulario y te confirmaremos la hora por WhatsApp.</p>
+        </div>
+
+        <form id="booking-form" class="form" novalidate>
+          <div class="field">
+            <label for="nombre">Nombre completo</label>
+            <input id="nombre" name="nombre" type="text" autocomplete="name" required>
+          </div>
+          <div class="field">
+            <label for="telefono">Teléfono</label>
+            <input id="telefono" name="telefono" type="tel" autocomplete="tel" required>
+          </div>
+          <div class="field field--full">
+            <label for="servicio">Servicio</label>
+            <select id="servicio" name="servicio" required>
+              <option value="">Selecciona una opción</option>
+              <option>Evaluación general</option>
+              <option>Limpieza y prevención</option>
+              <option>Estética dental</option>
+              <option>Ortodoncia</option>
+              <option>Implantes</option>
+            </select>
+          </div>
+          <div class="field">
+            <label for="fecha">Fecha preferida</label>
+            <input id="fecha" name="fecha" type="date" required>
+          </div>
+          <div class="field">
+            <label for="hora">Horario</label>
+            <select id="hora" name="hora" required>
+              <option value="">Selecciona</option>
+              <option>Mañana (9:00 – 13:00)</option>
+              <option>Tarde (14:00 – 19:00)</option>
+            </select>
+          </div>
+          <div class="field field--full">
+            <label for="mensaje">Comentarios <span class="optional">(opcional)</span></label>
+            <textarea id="mensaje" name="mensaje" rows="3"></textarea>
+          </div>
+          <p class="form__error" id="form-error" role="alert" hidden>Por favor completa todos los campos obligatorios.</p>
+          <button type="submit" class="btn btn--full">Confirmar solicitud</button>
+        </form>
+      </div>
+    </section>
+
+    <section id="contacto" class="section section--alt">
+      <div class="container contact">
+        <div>
+          <h3>Dirección</h3>
+          <p>Av. Principal 123, Ciudad</p>
+        </div>
+        <div>
+          <h3>Horario</h3>
+          <p>Lunes a viernes 9:00 – 19:00<br>Sábado 9:00 – 13:00</p>
+        </div>
+        <div>
+          <h3>Contacto</h3>
+          <p><a href="tel:+56900000000">+56 9 0000 0000</a><br><a href="mailto:contacto@sonrisaimperial.cl">contacto@sonrisaimperial.cl</a></p>
+        </div>
+      </div>
     </section>
   </main>
 
-  <footer>
-    <p>&copy; 2026</p>
+  <footer class="footer">
+    <div class="container">
+      <p>&copy; <span id="year"></span> Sonrisa Imperial · Clínica Dental</p>
+    </div>
   </footer>
+
+  <script src="script.js"></script>
 </body>
 </html>
